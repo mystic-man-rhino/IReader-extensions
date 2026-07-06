@@ -117,7 +117,7 @@ abstract class FreeWebNovel(deps: Dependencies) : ParsedHttpSource(deps) {
         val resp = client.submitForm(
             url = "https://freewebnovel.com/search",
             formParameters = Parameters.build {
-                append("searchkey", "love")
+                append("searchkey", query)
             }
         ) {
             headersBuilder()
